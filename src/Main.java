@@ -9,6 +9,7 @@ import java.net.InetSocketAddress;
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        System.out.println("Starting server");
         HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
         server.createContext("/test", new MyHandler());
         server.setExecutor(null); // creates a default executor
