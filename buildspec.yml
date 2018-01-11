@@ -12,7 +12,7 @@ phases:
       - echo Build started on `date`
       - javac src/Main.java
       - mkdir out
-      - jar cf out/web.jar src/*.class
+      - jar cfe out/web.jar Main src/*.class
   post_build:
     commands:
       - echo Build completed on `date`
